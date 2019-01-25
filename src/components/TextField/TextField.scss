@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sj-field {
+  display: block;
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: rem(40px);
+    padding: rem(8px) rem(16px);
+    border: 1px solid rgba($cBlack, 0.12);
+    border-radius: 2px;
+    background-color: $cWhite;
+    color: rgba($cBlack, 0.87);
+    font-family: $root-font-family;
+    font-size: $root-font-size;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: rem(40px);
+    letter-spacing: normal;
+    @include transition(.3s);
+
+    &::placeholder {
+      color: rgba($cBlack, 0.37);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-radius: 3px;
+    }
+
+    &:hover:not(.sj-field__input_invalid),
+    &:focus:not(.sj-field__input_invalid),
+    &:active:not(.sj-field__input_invalid) {
+      border-color: rgba($cBlack, 0.37);
+    }
+
+    &:focus:not(.sj-field__input_invalid) {
+      border-style: inset;
+    }
+
+    &_invalid {
+      margin-bottom: rem(4px);
+      border-color: $cError;
+    }
+  }
+
+  &__error {
+    display: block;
+    font-size: rem(12px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: left;
+    color: $cError;
+    @include transition(.3s);
+  }
+}

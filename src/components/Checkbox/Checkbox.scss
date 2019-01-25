@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sj-checkbox {
+  display: inline-flex;
+  align-items: center;
+
+  &__input {
+    display: none;
+  }
+
+  &__box {
+    display: block;
+    margin: 0 rem(8px) 0 0;
+    height: rem(24px);
+    width: rem(24px);
+    background-image: url("../../assets/off-normal.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px 18px;
+    @include transition(.3s);
+    cursor: pointer;
+
+    &:hover:not(.sj-checkbox__box_checked) {
+      background-image: url("../../assets/off-hover.svg");
+    }
+
+    &_checked {
+      background-image: url("../../assets/on-checked.svg");
+    }
+  }
+
+  &__label {
+    display: block;
+    font-family: $root-font-family;
+    font-size: $root-font-size;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba($cBlack, 0.87);
+  }
+}

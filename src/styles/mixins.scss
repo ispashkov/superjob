@@ -1,0 +1,9 @@
+@import "./variables";
+
+@function rem($size) {
+  @return $size / $root-font-size * 1rem;
+}
+
+@mixin transition($x: .3s) {
+  transition: $x;
+}

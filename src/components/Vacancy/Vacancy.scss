@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sj-vacancy {
+  display: block;
+  padding: rem(16px) 0 rem(12px);
+  border-top: 1px solid rgba($cBlack, 0.12);
+
+  &_closed {
+    & .sj-vacancy__title {
+      color: rgba($cBlack, 0.57);
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 rem(5px);
+    @include transition(.3s)
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &-status {
+    display: inline-flex;
+    align-items: center;
+    color: rgba($cBlack, 0.57);
+    font-size: rem(13px);
+    line-height: rem(24px);
+
+    &__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(20px);
+      height: rem(24px);
+      margin: 0 rem(4px) 0 0;
+      fill: rgba($cBlack, 0.57);
+    }
+  }
+
+  &__action {
+    margin: 0 rem(25px) 0 auto;
+  }
+}

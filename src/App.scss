@@ -1,0 +1,32 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+@import "./styles/vendors";
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sj-app {
+  display: block;
+  background-color: $cBgColor;
+  min-height: 100vh;
+  padding: rem(48px) 0;
+
+  &__heading {
+    margin: 0 0 rem(76px);
+  }
+
+  &__appbar {
+    margin-bottom: rem(12px);
+  }
+}
+
+

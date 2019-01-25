@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sj-heading {
+  display: block;
+  font-family: $root-font-family;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: left;
+  color: $cHeadingBlack;
+
+  &_h1 {
+    margin: rem(24px) 0 rem(48px);
+    font-size: rem(80px);
+    line-height: 0.8;
+  }
+
+  &_h2 {
+    margin: rem(12px) 0 rem(24px);
+    font-size: rem(23px);
+    line-height: 1.4;
+  }
+
+  &_h4 {
+    margin: rem(4px) 0 rem(8px);
+    font-size: rem(16px);
+    line-height: 1.5;
+  }
+}

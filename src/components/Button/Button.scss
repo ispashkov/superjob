@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sj-btn {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  color: $cSecondary;
+  background-color: transparent;
+  font-family: $root-font-family;
+  font-size: rem(14px);
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: rem(0.5px);
+  text-align: center;
+  text-transform: uppercase;
+  @include transition(.3s);
+
+  &:hover {
+    color: $cSecondaryHover;
+  }
+
+  &:active {
+    color: $cSecondaryActive;
+  }
+
+  &_primary {
+    color: $cPrimary;
+
+    &:hover {
+      color: $cPrimaryHover;
+    }
+
+    &:active {
+      color: $cPrimaryActive;
+    }
+  }
+
+  &_action {
+    padding: rem(10px) rem(24px);
+    border-radius: rem(2px);
+    box-shadow: 0 rem(2px) rem(2px) 0 rgba($cBlack, 0.12), 0 0 rem(2px) 0 rgba($cBlack, 0.12);
+    background-color: $cPrimary;
+    color: $cWhite;
+
+    &:hover {
+      color: $cWhite;
+      background-color: $cPrimaryHover;
+      border-color: $cPrimaryHover;
+    }
+
+    &:active {
+      color: $cWhite;
+      background-color: $cPrimaryActive;
+      border-color: $cPrimaryActive;
+    }
+  }
+}

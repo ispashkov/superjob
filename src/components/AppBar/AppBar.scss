@@ -1,0 +1,7 @@
+@import "../../styles/mixins";
+
+.sj-appbar {
+  display: grid;
+  grid-template-columns: max(350px) auto rem(215px);
+  grid-column-gap: rem(16px);
+}

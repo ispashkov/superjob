@@ -1,0 +1,10 @@
+@import "../../styles/mixins";
+
+.sj-project-list {
+  display: block;
+
+  &__item {
+    display: block;
+    padding: rem(4px) 0;
+  }
+}

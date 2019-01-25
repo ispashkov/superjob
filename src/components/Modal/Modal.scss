@@ -1,0 +1,70 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sj-modal {
+  display: block;
+  margin: 0 auto;
+  width: rem(600px);
+  padding: rem(24px);
+  border-radius: 3px;
+  box-shadow: 0 24px 24px 0 rgba($cBlack, 0.24), 0 0 24px 0 rgba($cBlack, 0.12);
+  background-color: $cWhite;
+
+  position: relative;
+
+  &-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($cBlack, 0.57);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99998;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 rem(24px);
+    padding: 0 0 rem(15px) 0;
+    border-bottom: 1px solid rgba($cBlack, 0.12);
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    font-family: $root-font-family;
+    font-size: rem(19px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba($cBlack, 0.87);
+  }
+
+  &__close {
+    display: inline-block;
+    height: rem(24px);
+    width: rem(24px);
+    padding: rem(4px);
+    fill: $cBlack;
+    opacity: 0.37;
+    cursor: pointer;
+    @include transition(.3s);
+
+    position: absolute;
+    top: 28px;
+    right: 24px;
+
+    &:hover {
+      opacity: 0.57;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../styles/mixins";
+
+.sj-container {
+  display: block;
+  max-width: rem(1024px);
+  margin: 0 auto;
+  padding: 0 rem(48px);
+}
